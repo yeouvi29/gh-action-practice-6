@@ -9,6 +9,8 @@ env:
   MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
 jobs:
   test:
+    # Public or paid private repositories can use environments feature in settings and then can configure secrets in different environments
+    environment: testing
     env:
         MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
         MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
