@@ -6,7 +6,7 @@ on:
       - dev
 # evn variables can be also specified under the name of the jobs or steps
 env:
-  MONGODB_DB_NAME: ${{ secret.MONGODB_DB_NAME }}
+  MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
 jobs:
   test:
     env:
